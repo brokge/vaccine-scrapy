@@ -12,3 +12,17 @@ class VaccineItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+
+class VaccineNewsItem(scrapy.Item):
+    title = scrapy.Field()
+    create_date = scrapy.Field()
+    update_date = scrapy.Field()
+    from_source = scrapy.Field()
+    from_url = scrapy.Field()
+    content = scrapy.Field()
+    summary = scrapy.Field()
+    md5 = scrapy.Field()
+    keyword = scrapy.Field()
+    pass
+
