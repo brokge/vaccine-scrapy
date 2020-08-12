@@ -1,15 +1,22 @@
-# vaccine-scrapy
-vaccine-scrapy
 # 这是新华网 关于疫苗的爬虫
 ## 环境
 - python 3.5.2
 - scrapy 1.5.2
 - conda 4.6.11
+- pycryptodome 
+- pymysql
 > 如果碰到 兼容性问题
 最好的方式，是通过 conda 安装所需要的环境变量，记得安装之后重启下系统
 ```
 conda install -c conda-forge scrapy
 ```
+当然也可以通过 pip3 来安装
+```
+pip3 --default-timeout=100 install scrapy 
+pip3 install pycryptodome
+pip3 install pymysql
+```
+
 ## 运行
 ```
 scrapy crawl spiderNews  
@@ -42,11 +49,12 @@ scrapy crawl spiderNews
     │   └── VaccineNewsSpider.py
     └── vaccine_name.txt
 ```
+- **dbsql.sql**---数据表结构脚本
 - **vaccine_name.txt** ---需要查询的关键字文件
 
 - **VaccineNewsSpider.py** --- 爬虫执行文件
 
-- pipelines.py --- 配置 通道的位置
+- pipelines.py --- 配置 通道的位置，根据自己情况调整
    ```python
    # 链接数据的配置
    self.connect = pymysql.connect(
