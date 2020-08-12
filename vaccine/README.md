@@ -49,6 +49,7 @@ scrapy crawl spiderNews
     │   └── VaccineNewsSpider.py
     └── vaccine_name.txt
 ```
+- **dbsql.sql**---数据表结构脚本
 - **vaccine_name.txt** ---需要查询的关键字文件
 
 - **VaccineNewsSpider.py** --- 爬虫执行文件
