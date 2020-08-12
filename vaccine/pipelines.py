@@ -22,8 +22,8 @@ class MySQLPipeLine(object):
             # 数据库地址
             port=3306,
             db="dbcontent",
-            user='yusuzi',
-            passwd='yusuzi',
+            user='root',
+            passwd='123456',
             charset='utf8',
             use_unicode=True
         )

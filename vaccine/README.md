@@ -3,11 +3,20 @@
 - python 3.5.2
 - scrapy 1.5.2
 - conda 4.6.11
+- pycryptodome 
+- pymysql
 > 如果碰到 兼容性问题
 最好的方式，是通过 conda 安装所需要的环境变量，记得安装之后重启下系统
 ```
 conda install -c conda-forge scrapy
 ```
+当然也可以通过 pip3 来安装
+```
+pip3 --default-timeout=100 install scrapy 
+pip3 install pycryptodome
+pip3 install pymysql
+```
+
 ## 运行
 ```
 scrapy crawl spiderNews  
